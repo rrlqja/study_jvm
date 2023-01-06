@@ -19,10 +19,10 @@ Hotspot Jvm 의 Heap 메모리는 Young Generation 과 Old Generation 으로 나
   생성된지 얼마 안된 객체들이 저장되는 장소. Minor GC 로 사용되지 않는 객체가 제거된다.  
     
     * Eden  
-    객체가 최초로 Heap 영역에 할당되는 장소  
+    객체가 최초로 Heap 영역에 할당되는 장소.  
     
     * Survivor 0, Survivor 1  
-    
+    Eden 영역에서 살아남은 객체들이 저장되는 장소.  
   
   * _Old Generation_  
   생성된지 오래된 객체들이 저장되는 장소. Young Generation 에서 살아남은 객체가 옮겨온다. Full GC 로 사용되지 않는 객체가 제거된다. 
@@ -30,3 +30,10 @@ Hotspot Jvm 의 Heap 메모리는 Young Generation 과 Old Generation 으로 나
   * _Perm_  
   클래스의 메타정보, 메서드의 메타정보, Static 변 등이 저장되는 장소. Perm 영역이 일정수치 이상 가득 차면 OOM(Out Of Memory) 에러가 발생한다.  
 
+* __Card Table__
+Old 영역의 객체가 Young 영역의 객체를 참조할 경우 Old 영역에있는 Card Table 에 표시한다. Minor GC 를 수행할 때 Old 영역의 모든 객체의 참조를 확인하지 않고 Card Table을 확인한다. 
+
+* __Minor GC___
+Young 영역에 GC 가 발생하는 것.  
+Micor GC 가 발생하면 Eden 과 Survivor 0 에서 사용되고 있는 객체를 Survivor 1 에 복사한다. 이후 Eden 과 Survivor 0 을 정리한다. 
+다음 Minor GC가 발생하면 Eden 과 Survivor 1 에서 살아있는 객체를 Survivor 0 에 복사하고 Eden 과 Survivor1을 정리한다.
