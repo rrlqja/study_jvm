@@ -43,10 +43,10 @@ Minor GC 도 Stop-the-world 가 발생한다.
 * __Full GC__
 Old 영역에 GC 가 발생하는 것.  
 Full GC 를 수행하는 여러 알고리즘이 존재한다.
-  1. Serial GC  
-  2. Parallel GC  
-  3. Parallel Old GC  
-  4. Concurrent Mark & Sweep GC (CMS) 
-  5. G1 (Garbage First) GC  
+1. Serial GC  
+2. Parallel GC  
+3. Parallel Old GC  
+4. Concurrent Mark & Sweep GC (CMS) 
+5. G1 (Garbage First) GC  
 Full GC 는 속도가 매우 느리고 Stop-the-world가 발생한다.  
 Full GC 는 성능과 안정성에 큰 영향을 끼친다. 
