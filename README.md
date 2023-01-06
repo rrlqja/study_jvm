@@ -36,4 +36,17 @@ Old 영역의 객체가 Young 영역의 객체를 참조할 경우 Old 영역에
 * __Minor GC__  
 Young 영역에 GC 가 발생하는 것.  
 Micor GC 가 발생하면 Eden 과 Survivor 0 에서 사용되고 있는 객체를 Survivor 1 에 복사한다. 이후 Eden 과 Survivor 0 을 정리한다.  
-다음 Minor GC 가 발생하면 Eden 과 Survivor 1 에서 살아있는 객체를 Survivor 0 에 복사하고 Eden 과 Survivor1을 정리한다.
+다음 Minor GC 가 발생하면 Eden 과 Survivor 1 에서 살아있는 객체를 Survivor 0 에 복사하고 Eden 과 Survivor1을 정리한다.  
+두 Survivor 영역중 한 곳은 반드시 비어있어야 한다. 
+Minor GC 도 Stop-the-world 가 발생한다. 
+
+* __Full GC__
+Old 영역에 GC 가 발생하는 것.  
+Full GC 를 수행하는 여러 알고리즘이 존재한다. 
+  1. Serial GC  
+  2. Parallel GC  
+  3. Parallel Old GC  
+  4. Concurrent Mark & Sweep GC (CMS) 
+  5. G1 (Garbage First) GC  
+Full GC 는 속도가 매우 느리고 Stop-the-world가 발생한다.
+Full GC 는 성능과 안정성에 큰 영향을 끼친다.
