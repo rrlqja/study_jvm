@@ -14,8 +14,15 @@ GC 튜닝이란 Stop-the-world 의 시간을 줄이는 것.
 
 * __Hotspot Heap Structure__
 Hotspot Jvm 의 Heap 메모리는 Young Generation 과 Old Generation 으로 나누어져있다.  
+  
   * _Young Generation_  
   생성된지 얼마 안된 객체들이 저장되는 장소. Minor GC 로 사용되지 않는 객체가 제거된다.  
+    
+    * Eden  
+    객체가 최초로 Heap 영역에 할당되는 장소  
+    
+    * Survivor 0, Survivor 1  
+    
   
   * _Old Generation_  
   생성된지 오래된 객체들이 저장되는 장소. Young Generation 에서 살아남은 객체가 옮겨온다. Full GC 로 사용되지 않는 객체가 제거된다. 
