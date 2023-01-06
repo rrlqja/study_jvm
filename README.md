@@ -5,7 +5,7 @@ Jvm(Java Virtual Machine)에서 불필요한 메모리를 자동으로 정리해
 GC 를 실행하기 위해 Jvm이 어플리케이션의 작동을 멈추는 행동.  
 GC 튜닝이란 Stop-the-world 의 시간을 줄이는 것.  
 
-* __Generational G__ 
+* __Generational GC__ 
   >대부분의 객체는 금방 접근 불가능 상태가 된다.  
   >오래된 객체에서 젊은 객체로의 참조는 아주 적게 존재한다.  
 
