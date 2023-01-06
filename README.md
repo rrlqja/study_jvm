@@ -47,6 +47,20 @@ Full GC 는 속도가 매우 느리고 Stop-the-world가 발생한다.
 Full GC 는 성능과 안정성에 큰 영향을 끼친다. 
 
 * __GC 파라미터__ 
-  * _Heap 사이_  
+  * _Heap 사이즈 조절_  
   Xms: 최소 Heap 사이즈, Xmx: 최대 Heap 사이즈  
+  Xms 와 Xmx를 동일한 사이즈로 설정하면 일정한 크기의 힙 사이즈를 유지한다.  
   
+  * _Perm 사이즈 조절_  
+  어플리케이션에서 Out Of Memory 에러가 발생할 경우 Perm 사이즈를 의심해야된다. 
+  
+  * _New/Old 영역 크기 비율 조절_  
+  
+  * _Survivor 영역 조절_  
+  
+  * _Server/Client 옵션_  
+  Server: 서버용 어플리케이션에 적합한 Jvm 옵션. 서버의 경우 New 객체들이 많이 발생한다. 따라서 상대적으로 Old 영역이 Young 영역보다 작다. 
+  Client: 클라이언트용 어플리케이션에 적합한 Jvm 옵션. 하나의 클라이언트에서는 객체가 상대적으로 오래 살아남는다. 따라서 상대적으로 Old 영역이 Young 영역보다 크다.  
+  
+  * _GC 알고리즘 선택_  
+
