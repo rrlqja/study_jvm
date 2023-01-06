@@ -35,5 +35,5 @@ Old 영역의 객체가 Young 영역의 객체를 참조할 경우 Old 영역에
 
 * __Minor GC__  
 Young 영역에 GC 가 발생하는 것.  
-Micor GC 가 발생하면 Eden 과 Survivor 0 에서 사용되고 있는 객체를 Survivor 1 에 복사한다. 이후 Eden 과 Survivor 0 을 정리한다. 
-다음 Minor GC가 발생하면 Eden 과 Survivor 1 에서 살아있는 객체를 Survivor 0 에 복사하고 Eden 과 Survivor1을 정리한다.
+Micor GC 가 발생하면 Eden 과 Survivor 0 에서 사용되고 있는 객체를 Survivor 1 에 복사한다. 이후 Eden 과 Survivor 0 을 정리한다.  
+다음 Minor GC 가 발생하면 Eden 과 Survivor 1 에서 살아있는 객체를 Survivor 0 에 복사하고 Eden 과 Survivor1을 정리한다.
