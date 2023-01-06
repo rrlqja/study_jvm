@@ -46,7 +46,7 @@ Full GC 를 수행하는 여러 알고리즘이 존재한다.
 Full GC 는 속도가 매우 느리고 Stop-the-world가 발생한다.  
 Full GC 는 성능과 안정성에 큰 영향을 끼친다. 
 
-* __GC 파라미터__  
-* _Heap 사이_  
+* __GC 파라미터__ 
+  * _Heap 사이_  
   Xms: 최소 Heap 사이즈, Xmx: 최대 Heap 사이즈  
   
